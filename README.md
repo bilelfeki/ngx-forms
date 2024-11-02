@@ -1,27 +1,56 @@
-# NgxForms
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.10.
+# Form Builder Architecture
 
-## Development server
+This project is designed to create and preview forms dynamically based on a JSON configuration. The architecture is built using Angular components and models, along with JSON-driven configuration files.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Project Structure
 
-## Code scaffolding
+The following key components make up the architecture:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### 1. ngxFormBuilder
+- **Purpose:** Responsible for initiating the form-building process.
+- **Components:**
+  - `ngxInputBuilder`: Component that dynamically creates form inputs based on the configuration in `ngx-form.json`.
 
-## Build
+### 2. ngx-form.json
+- **Purpose:** JSON file containing the configuration for the form. It specifies the structure and properties of each form input.
+- **Structure:**
+  ```json
+  {
+    "form": {
+      "input": [],
+      "config": {
+        // configuration settings
+      }
+    }
+  }
+  ```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### 3. Form Generator (ngxFormGenerator)
+- **Purpose:** Processes the form configuration and generates the necessary components for rendering the form.
+- **Components:**
+  - `formulaire.ts`: Contains the logic for creating the form structure and managing form data.
+  - `formulaire.html`: Template for rendering the form.
 
-## Running unit tests
+### 4. ngxFormPreview
+- **Purpose:** Component responsible for displaying a preview of the generated form.
+- **Usage:** After form creation, the preview displays the form with all its configured inputs and settings.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### 5. ngxFormLib
+- **Purpose:** A library containing shared components and models used across the form-building system.
+- **Components:**
+  - **Components:**
+    - `NgxInput.ts`: Represents an input component for the form. This component uses configurations from `ngx-form.json` to dynamically render form inputs.
+  - **Models:**
+    - `NgxInputConfig.ts`: Model that defines the configuration schema for form inputs, such as input type, placeholder text, validations, etc.
 
-## Running end-to-end tests
+## Workflow
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+1. **Configuration Loading:** The JSON configuration from `ngx-form.json` is loaded by `ngxFormBuilder`.
+2. **Form Generation:** `ngxFormGenerator` uses the configuration data to create the form structure. The generated form is represented by `formulaire.ts` (logic) and `formulaire.html` (view).
+3. **Component Creation:** Based on the configuration, `NgxInput` components are instantiated dynamically with configurations specified in `NgxInputConfig`.
+4. **Form Preview:** `ngxFormPreview` displays a preview of the form, allowing users to see the form layout and test the inputs.
+5. **Rendering:** The form is rendered with `<ngx-form>` and `<ngx-input>` components, configured based on JSON data.
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+This architecture provides a modular and scalable way to create forms dynamically based on JSON configurations, allowing easy customization and previewing of forms.
