@@ -40,9 +40,9 @@ The following key components make up the architecture:
 - **Purpose:** A library containing shared components and models used across the form-building system.
 - **Components:**
   - **Components:**
-    - `NgxInput.ts`: Represents an input component for the form. This component uses configurations from `ngx-form.json` to dynamically render form inputs.
+    - `ngx-input.ts`: Represents an input component for the form. This component uses configurations from `ngx-form.json` to dynamically render form inputs.
   - **Models:**
-    - `NgxInputConfig.ts`: Model that defines the configuration schema for form inputs, such as input type, placeholder text, validations, etc.
+    - `ngx-input-config.ts`: Model that defines the configuration schema for form inputs, such as input type, placeholder text, validations, etc.
 
 ## Workflow
 

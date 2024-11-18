@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { NgxButtonConfig } from '../NgxButtonConfig';
+import { NgxButtonConfig } from '../ngx-button-config';
 
 @Injectable({
   providedIn: 'root',
