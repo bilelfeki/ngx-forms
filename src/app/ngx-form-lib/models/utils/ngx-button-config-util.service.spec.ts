@@ -1,7 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 
-import { NgxButtonConfigService } from './ngxButtonConfigUtil.service';
-import { NgxButtonConfig } from '../NgxButtonConfig';
+import { NgxButtonConfigService } from './ngx-button-config-util.service';
+import { NgxButtonConfig } from '../ngx-button-config';
 describe('buttonConfigTest', () => {
   let service: NgxButtonConfigService;
   let buttonConfig: NgxButtonConfig = {
