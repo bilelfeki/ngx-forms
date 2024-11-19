@@ -30,7 +30,7 @@ export class NgxButtonConfigService {
   }
   generateCssStyle(config: NgxButtonConfig): string {
     return `
-      color: ${config.color};
+    color: ${config.color};
       background: ${config.background};
       font-size: ${config.fontSize};
       width: ${config.width};
@@ -39,6 +39,6 @@ export class NgxButtonConfigService {
       right: ${config.right};
       bottom: ${config.bottom};
       left: ${config.left};
-    `;
+      position: ${config.position};`;
   }
 }
