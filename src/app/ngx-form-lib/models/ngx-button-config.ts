@@ -8,6 +8,7 @@ export interface NgxButtonConfig {
   right: string,
   bottom: string,
   left: string,
+  position:string
 }
 /**
  * usage example
