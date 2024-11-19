@@ -8,21 +8,25 @@ export interface NgxButtonConfig {
   right: string,
   bottom: string,
   left: string,
-  position:string
+  position:string,
+  border:string,
+  borderRadius:string
 }
 /**
  * usage example
  *  {
-        "color": "green",
-        "background": "#FFFFFF",
-        "fontSize": "10px",
-        "width": "10px",
-        "height": "9px",
-        "top": "50px",
-        "right": "509.2px",
-        "bottom": "290px",
-        "left": "69.2px",
-
-      }
+    color: '#3f51b5',
+    background: '#00000',
+    fontSize: '20px',
+    width: '100px',
+    height: '30px',
+    top: '50px',
+    right: '509.2px',
+    bottom: '290px',
+    left: '69.2px',
+    position:'relative',
+    border: '1px solid #3f51b5',
+    borderRadius:'50px'
+  }
     ]
  */
