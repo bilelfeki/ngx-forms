@@ -15,6 +15,8 @@ describe('buttonConfigTest', () => {
     bottom: '290px',
     left: '69.2px',
     position: 'absolute',
+    border: '1px solid #3f51b5',
+    borderRadius:'50px'
   };
   beforeEach(() => {
     TestBed.configureTestingModule({});
