@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { HeaderComponent } from "./ngx-form-demo/shared/header/header.component";
-import { NgxFormPreviewComponent } from "./ngx-form-demo/ngx-form-preview/ngx-form-preview/ngx-form-preview.component";
+import { NgxFormPreviewComponent } from "./ngx-form-demo/ngx-form-preview/ngx-form-preview.component";
 
 @Component({
   selector: 'app-root',
