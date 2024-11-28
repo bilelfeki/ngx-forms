@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NgxButtonPreviewComponent } from "../ngx-button-preview/ngx-button-preview.component";
+import { NgxButtonPreviewComponent } from "./ngx-button-preview/ngx-button-preview.component";
 
 @Component({
   selector: 'app-ngx-form-preview',
