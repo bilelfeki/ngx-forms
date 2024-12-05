@@ -39,6 +39,9 @@ export class NgxButtonConfigService {
       right: ${config.right};
       bottom: ${config.bottom};
       left: ${config.left};
-      position: ${config.position};`;
+      position: ${config.position};
+      border-radius: ${config.borderRadius};
+      border: ${config.border};
+    `;
   }
 }
