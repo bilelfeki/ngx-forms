@@ -16,13 +16,27 @@ describe('buttonConfigTest', () => {
     left: '69.2px',
     position: 'absolute',
     border: '1px solid #3f51b5',
-    borderRadius:'50px'
+    borderRadius:'50px',
   };
   beforeEach(() => {
     TestBed.configureTestingModule({});
     service = TestBed.inject(NgxButtonConfigService);
   });
   it('should generate  style as a string ', () => {
+    let buttonConfigExpectedStyle =
+    `color: #FFFFFF;
+    background: #FFFFFF;
+    font-size: 10px;
+    width: 10px;
+    height: 9px;
+    top: 50px;
+    right: 509.2px;
+    bottom: 290px;
+    left: 69.2px;
+    position: absolute;
+    border: 1px solid #3f51b5;
+    border-radius: 50px;`
+  ;
     let styleAsString = service.generateCssStyle(buttonConfig);
 
     let styleAsList:string[] = generateCleanStyleWithoutSpace(styleAsString);
@@ -31,8 +45,7 @@ describe('buttonConfigTest', () => {
      * remove the last element after split with ;
      */
     styleAsList.pop();
-
-    let styleListReferenceWithoutSpace = getStyleReference(buttonConfig)
+    let styleListReferenceWithoutSpace:string[] = generateCleanStyleWithoutSpace(buttonConfigExpectedStyle);
 
     let isStyleCoherent = styleAsList.every((elem) =>styleListReferenceWithoutSpace.find((element) => element === elem))
     expect(isStyleCoherent).toBe(true);
@@ -56,18 +69,6 @@ describe('buttonConfigTest', () => {
     expect(service.validateConfig(_buttonConfig)).toBeFalse();
   });
 });
-function getStyleReference(buttonConfig: NgxButtonConfig): string[] {
-  return generateCleanStyleWithoutSpace(`color: ${buttonConfig.color};
-     background: ${buttonConfig.background};
-     font-size: ${buttonConfig.fontSize};
-     width: ${buttonConfig.width};
-     height: ${buttonConfig.height};
-     top: ${buttonConfig.top};
-     right: ${buttonConfig.right};
-     bottom: ${buttonConfig.bottom};
-     left: ${buttonConfig.left};
-     position: ${buttonConfig.position};`);
-}
 
 function generateCleanStyleWithoutSpace(styleAsString: string) {
   return styleAsString.split(';').map((element) => element.trim());
