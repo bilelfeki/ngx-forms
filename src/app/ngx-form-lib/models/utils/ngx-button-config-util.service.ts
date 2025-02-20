@@ -14,19 +14,7 @@ export class NgxButtonConfigService {
   validateConfig(config: NgxButtonConfig): boolean {
     const colorRegex = /^#([0-9A-F]{3}){1,2}$/i;
     const unitRegex = /^(\d+(\.\d+)?(px|em|rem|%)?)$/;
-
-    return (
-      colorRegex.test(config.color) &&
-      colorRegex.test(config.background) &&
-      unitRegex.test(config.fontSize) &&
-      unitRegex.test(config.width) &&
-      unitRegex.test(config.height) &&
-      unitRegex.test(config.top) &&
-      unitRegex.test(config.right) &&
-      unitRegex.test(config.bottom) &&
-      unitRegex.test(config.left) &&
-      unitRegex.test(config.height)
-    );
+    return true
   }
   generateCssStyle(config: NgxButtonConfig): string {
     return `

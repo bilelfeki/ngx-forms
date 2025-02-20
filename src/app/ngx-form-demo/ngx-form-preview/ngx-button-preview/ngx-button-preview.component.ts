@@ -10,7 +10,6 @@ import { NgxButtonModelHandler } from '../../shared/services/ngx-button-model-ha
   styleUrl: './ngx-button-preview.component.scss'
 })
 export class NgxButtonPreviewComponent {
-
   private ngxButtonModelHandler = inject(NgxButtonModelHandler);
   buttonConfig = this.ngxButtonModelHandler.ngxButtonConfig;
 }

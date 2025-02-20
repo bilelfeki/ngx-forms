@@ -1,10 +1,11 @@
 import { Component, Input } from '@angular/core';
 import { NgxInputConfig } from '../../models/ngx-input-config';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-ngx-input',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './ngx-input.component.html',
   styleUrl: './ngx-input.component.scss',
 })

@@ -1,1 +1,29 @@
-<button [ngStyle]="_buttonConfig">Button</button>
+<div>
+  <input
+    [type]="form.input.type"
+    [placeholder]="form.input.placeholder"
+    [ngStyle]="form.input.style"
+    id="name"
+  />
+  <input
+  [type]="form.input1.type"
+  [placeholder]="form.input1.placeholder"
+  [ngStyle]="form.input1.style"
+  id="name"
+/>
+<input
+[type]="form.input2.type"
+[placeholder]="form.input2.placeholder"
+[ngStyle]="form.input2.style"
+id="name"
+/>
+  <button [ngStyle]="_buttonConfig">{{ _buttonConfig.name }}</button>
+</div>
+
+<div>
+  <p>Form:</p>
+  <pre>{{ ngxButtonTsCode }}</pre>
+</div>
+
+<pre>{{ ngxButtonHtmlCode }}</pre>
+

@@ -1,16 +1,25 @@
 export interface NgxButtonConfig {
-  color: string,
-  background:string,
-  fontSize: string,
-  width: string,
-  height: string,
-  top: string,
-  right: string,
-  bottom: string,
-  left: string,
-  position:string,
-  border:string,
-  borderRadius:string
+  name:string,
+  color?: string,
+  background?:string,
+  fontSize?: string,
+  width?: string,
+  height?: string,
+  top?: string,
+  right?: string,
+  bottom?: string,
+  left?: string,
+  position?:string,
+  border?:string,
+  borderRadius?:string,
+  display?:string,
+  marginTop?:string,
+  boxShadow?:string,
+  fontWeight?:string,
+  cursor?:string,
+  transition?:string,
+  hoverBackground?:string,
+  margin:string
 }
 /**
  * usage example

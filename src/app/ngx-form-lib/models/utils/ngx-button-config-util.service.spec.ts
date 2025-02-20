@@ -5,19 +5,23 @@ import { NgxButtonConfig } from '../ngx-button-config';
 describe('buttonConfigTest', () => {
   let service: NgxButtonConfigService;
   let buttonConfig: NgxButtonConfig = {
-    color: '#FFFFFF',
-    background: '#FFFFFF',
-    fontSize: '10px',
-    width: '10px',
-    height: '9px',
-    top: '50px',
-    right: '509.2px',
-    bottom: '290px',
-    left: '69.2px',
+    color: '#FFFFFF', // White text for readability
+    background: '#3f51b5', // Primary blue color
+    fontSize: '14px', // Slightly larger for readability
+    width: '120px', // More space for text/icons
+    height: '40px', // Better proportion for buttons
     position: 'absolute',
-    border: '1px solid #3f51b5',
-    borderRadius:'50px',
+    top: '50px',
+    right: '20px', // Adjusted for spacing
+    border: 'none', // Cleaner design
+    borderRadius: '8px', // Slightly rounded for modern UI
+    boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)', // Soft shadow for depth
+    fontWeight: 'bold', // Enhances text clarity
+    cursor: 'pointer', // Makes it clear it's clickable
+    transition: 'background 0.3s ease', // Smooth hover effect
+    hoverBackground: '#303f9f', // Darker shade on hover
   };
+
   beforeEach(() => {
     TestBed.configureTestingModule({});
     service = TestBed.inject(NgxButtonConfigService);

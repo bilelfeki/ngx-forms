@@ -10,5 +10,5 @@ import { NgxInputPreviewComponent } from "./ngx-input-preview/ngx-input-preview.
   styleUrl: './ngx-form-preview.component.scss'
 })
 export class NgxFormPreviewComponent {
-
+  
 }
